@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Détails de la carte</title>
+	</head>
+	<body>
+		<h1 id="mainHeader">Carte introuvable !</h1>
+		<p id="name" style="display: none">Nom</p>
+		<p id="isPermanant" style="display: none">Permanant</p>
+		<p id="isTerrain" style="display: none">Terrain</p>
+		<p id="type" style="display: none">Type</p>
+		<p id="strength" style="display: none">Force</p>
+		<p id="durability" style="display: none">Endurance</p>
+		<p id="color" style="display: none">Couleur</p>
+		<p id="misc" style="display: none">Divers</p>
+		<script>
+			var colors = ["Blanc", "Bleu", "Noir", "Rouge", "Vert"];
+			var types = ["Arpenteur", "Artefact", "Conspiration", "Créature", "Enchantement", "Enchantement du monde", "Éphémère", "Machination", "Phénomène", "Plan", "Rituel", "Tribal", "Vanguard"];
+			var yes = "Oui";
+			var cards = [
+			{"name": "Dragon", "type": types[3], "color": colors[2], "durability": 5, "strength": 6, "misc": "Un dragon hyper classe qui crache du feu et tout et tout !!"},
+			{"name": "Forêt enneigée", isPermanant: yes, "isTerrain": yes, "misc": "Une forêt que pour la traverser ben faut mettre un gros pull de leine pour pas geler sur place."}
+			];
+			
+			var splittedURL = window.location.href.split("?");
+			if (splittedURL.length == 2)
+			{
+				var selectedId = splittedURL[1];
+				if (selectedId >= 0 && selectedId < cards.length)
+				{
+					document.getElementById("mainHeader").innerHTML = "Détails de la carte";
+					var card = cards[selectedId];
+					for (var k in Object.keys(card))
+						displayInfo(Object.keys(card)[k], card[Object.keys(card)[k]]);
+				}
+			}
+			
+			function displayInfo(infoName, infoText)
+			{
+				var p = document.getElementById(infoName);
+				p.style.display = "block";
+				p.innerHTML += " : " + infoText;
+			}
+		</script>
+	</body>
+</html>
