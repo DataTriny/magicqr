@@ -21,14 +21,15 @@
 			var types = ["Arpenteur", "Artefact", "Conspiration", "Créature", "Enchantement", "Enchantement du monde", "Éphémère", "Machination", "Phénomène", "Plan", "Rituel", "Tribal", "Vanguard", "Terrain de base", "Terrain"];
 			var yes = "Oui";
 			var cards = [
-				{"name": "Desolation Twin", "CMC": "10", "type": types[3], "subtype": "Eldrazi", "strength": "10", "durability": "10", "color": colors[5], 
-				 "action": "When you cast Desolation Twin, create a 10/10 colorless Eldrazi creature token.", 
+				{"name": "Desolation Twin", "CMC": "10X", "type": types[3], "subtype": "Eldrazi", "strength": "10", "durability": "10", "color": colors[5], 
+				 "action": "Quand vous lancez Desolation Twin, placez sur le terrain un jeton 10/10 eldrazi incolore.", 
 				 "misc": "\"With precise coordiantion and enough blood spilled, one can be driven off, even brought down. But two ... that's a lot of blood.\" -- Munda, ambush leader"},
 				{"name": "Mountain", "type": types[13], "subtype": "Mountain", "color": colors[3]},
 				{"name": "Island", "type": types[13], "subtype": "Island", "color": colors[1]},
 				{"name": "Plain", "type": types[13], "subtype": "Plain", "color": colors[0]},
 				{"name": "Forest", "type": types[13], "subtype": "Forest", "color": colors[4]},
-				{"name": "Swamp", "type": types[13], "subtype": "Swamp", "color": colors[2]}
+				{"name": "Swamp", "type": types[13], "subtype": "Swamp", "color": colors[2]},
+				{"name": "Croissance sauvage", "CMC": "1 Green", "type": types[4], "subtypes": "Aura", "color": colors[4], "action": "Enchanter terrain : Lorsque le terrain enchanté est engagé, ajoutez 1 Mana Vert à votre réserve", "misc": "Si vous arretez d'écouter, vous l'entendrez penser"}
 			];
 			
 			var splittedURL = window.location.href.split("?");
