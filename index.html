@@ -2,25 +2,33 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>Détails de la carte</title>
+		<title>Magic cards</title>
 	</head>
 	<body>
 		<h1 id="mainHeader">Carte introuvable !</h1>
 		<p id="name" style="display: none">Nom</p>
-		<p id="isPermanant" style="display: none">Permanant</p>
-		<p id="isTerrain" style="display: none">Terrain</p>
+		<p id="CMC" style="display: none">Cout Converti en Mana</p>
+		<p id="supertype" style="display: none">Super Type</p>
 		<p id="type" style="display: none">Type</p>
+		<p id="subtype" style="display: none">Sub Type</p>
 		<p id="strength" style="display: none">Force</p>
 		<p id="durability" style="display: none">Endurance</p>
-		<p id="color" style="display: none">Couleur</p>
+		<p id="color" style="display: none">Couleurs</p>
+		<p id="action" style="display: none">Actions</p>
 		<p id="misc" style="display: none">Divers</p>
 		<script>
-			var colors = ["Blanc", "Bleu", "Noir", "Rouge", "Vert"];
-			var types = ["Arpenteur", "Artefact", "Conspiration", "Créature", "Enchantement", "Enchantement du monde", "Éphémère", "Machination", "Phénomène", "Plan", "Rituel", "Tribal", "Vanguard"];
+			var colors = ["Blanc", "Bleu", "Noir", "Rouge", "Vert", "Incolore"];
+			var types = ["Arpenteur", "Artefact", "Conspiration", "Créature", "Enchantement", "Enchantement du monde", "Éphémère", "Machination", "Phénomène", "Plan", "Rituel", "Tribal", "Vanguard", "Terrain de base", "Terrain"];
 			var yes = "Oui";
 			var cards = [
-			{"name": "Dragon", "type": types[3], "color": colors[2], "durability": 5, "strength": 6, "misc": "Un dragon hyper classe qui crache du feu et tout et tout !!"},
-			{"name": "Forêt enneigée", isPermanant: yes, "isTerrain": yes, "misc": "Une forêt que pour la traverser ben faut mettre un gros pull de leine pour pas geler sur place."}
+				{"name": "Desolation Twin", "CMC": "10", "type": types[3], "subtype": "Eldrazi", "strength": "10", "durability": "10", "color": colors[5], 
+				 "action": "When you cast Desolation Twin, create a 10/10 colorless Eldrazi creature token.", 
+				 "misc": "\"With precise coordiantion and enough blood spilled, one can be driven off, even brought down. But two ... that's a lot of blood.\" -- Munda, ambush leader"},
+				{"name": "Mountain", "type": types[13], "subtype": "Mountain", "color": colors[3]},
+				{"name": "Island", "type": types[13], "subtype": "Island", "color": colors[1]},
+				{"name": "Plain", "type": types[13], "subtype": "Plain", "color": colors[0]},
+				{"name": "Forest", "type": types[13], "subtype": "Forest", "color": colors[4]},
+				{"name": "Swamp", "type": types[13], "subtype": "Swamp", "color": colors[2]}
 			];
 			
 			var splittedURL = window.location.href.split("?");
@@ -41,6 +49,17 @@
 				var p = document.getElementById(infoName);
 				p.style.display = "block";
 				p.innerHTML += " : " + infoText;
+			}
+				
+			function getColors(colors){
+				var s = "";
+				for ( var i = 0; i < colors.length; i++ ){
+					if ( i > 0 ){
+						s += "-";
+					}
+					s += this.colors[colors[i]];
+				}
+				return s;
 			}
 		</script>
 	</body>
