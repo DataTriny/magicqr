@@ -21,8 +21,8 @@
 			var types = ["Arpenteur", "Artefact", "Conspiration", "Créature", "Enchantement", "Enchantement du monde", "Éphémère", "Machination", "Phénomène", "Plan", "Rituel", "Tribal", "Vanguard", "Terrain de base", "Terrain"];
 			var yes = "Oui";
 			var cards = [
-				{"name": "Desolation Twin", "CMC": "10 Général", "type": types[3], "subtype": "Eldrazi", "strength": "10", "durability": "10", "color": colors[5], 
-				 "action": "Quand vous lancez Desolation Twin, placez sur le terrain un jeton 10/10 eldrazi incolore.", 
+				{"name": "Desolation Twin", "CMC": "10 Général", "type": types[3], "subtype": "Eldrazi", "strength": "10", "durability": "10", "color": colors[5],
+				 "action": "Quand vous lancez Desolation Twin, placez sur le terrain un jeton 10/10 eldrazi incolore.",
 				 "misc": "\"With precise coordiantion and enough blood spilled, one can be driven off, even brought down. But two ... that's a lot of blood.\" -- Munda, ambush leader"},
 				{"name": "Mountain", "type": types[13], "subtype": "Mountain", "color": colors[3]},
 				{"name": "Island", "type": types[13], "subtype": "Island", "color": colors[1]},
@@ -33,12 +33,20 @@
                 {"name": "Parcours de découverte", "CMC": "2 Général, 1 Vert", "type": types[10], "color": colors[4], "action": "Choisissez l'un - Cherchez dans votre librairie jusqu'à deux cartes de terrain de base, placez les dans votre main et mélangez votre bibliothèque; ou vous pouvez jouer jusqu'à deux terrains supplémentaires ce tour-ci. Union 2 Général, 1 Vert : Choisissez les deux si vous payez le coût d'union."},
                 {"name": "vitaliste naga", "CMC": "1 Général, 1 Vert", "type": types[3], "subtype": "Druide Naga", "color": colors[4], "strength": "1", "durability": "2", "action": "Engagez ce permanent, ajoutez un mana à votre réserve de la couleur qu'un de vos terrains pourrait produire", "misc": "Les terres du Dieu Pharaon sont empreintes de son souffle"},
                 {"name": "Fyndhorn Elder", "CMC": "2 Général, 1 Vert", "type" : types[3], "subtype": "elfe", "color": colors[4], "strength": "1", "durability": "1", "action": "Engagez ce permanent, ajoutez deux manas verts à votre réserve", "misc": "\"Do we know what we're doing ? Yes - The will of Freyalise.\" - Laina of the Elvish Council"},
-                {"name": "Craw Wurm", "CMC": "4 Général, 2 Vert", "type": types[3], "subtype": "Vouivre", "color": colors[4], "strength": "6", "durability": "4", "misc": "The most terrifying about the Craw Wurm is probably the horrible crashing sound it makes as it speeds through the forest. This noise is so loud it echoes through the trees and seems to come from all directions at once."},
+                {"name": "Vouivre Vorace", "CMC": "4 Général, 2 Vert", "type": types[3], "subtype": "Vouivre", "color": colors[4], "strength": "6", "durability": "4", "misc": "The most terrifying about the Craw Wurm is probably the horrible crashing sound it makes as it speeds through the forest. This noise is so loud it echoes through the trees and seems to come from all directions at once."},
                 {"name": "Source de vie", "CMC": "X Général, 1 Vert", "type": types[10], "color": colors[4], "action": "Le joueur ciblé gagne X points de vie."},
-                {"name": "Frappe du prédateur", "CMC": "1 Général, 1 Vert", "type" : types[6], "color": colors[4], "action": "La créature ciblée gagne +3/+3 et acquiert le piétinement jusqu'à la fin du tour.", "misc": "Si vous l'entendez approcher, c'est qu'il n'est pas après vous."}
-                
+                {"name": "Frappe du prédateur", "CMC": "1 Général, 1 Vert", "type" : types[6], "color": colors[4], "action": "La créature ciblée gagne +3/+3 et acquiert le piétinement jusqu'à la fin du tour.", "misc": "Si vous l'entendez approcher, c'est qu'il n'est pas après vous."},
+								{"name": "Mur de ronces", "CMC": "2 Général, 1 Vert", "type": types[3], "subtype": "Mur", "strength": "2", "durability": "3", "action": "Pour 1 Mana Vert, Régénérer cette créature", "misc": "\"Et la ronce couvrait de sa verte tunique Tous ces vieux pans de murs écroulés, saloniques\"- Victor Hugo, la Légende des siècles."},
+								{"name": "Scaled Wurm", "CMC": "7 Général, 1 Vert", "type": types[3], "subtype": "Vouivre", "color": colors[4], "strength": "7", "durability": "6", "misc": "\"Flourishing during te Ice Age, these Wurms were the bane of all Kjeldorans. Theur great size and ferocity made them the subject of countless nightmares - they embodied the worst of Ice Age\" - Kjeldor: Ice Civilization"},
+								{"name": "Leurre", "CMC": "1 Général, 2 Vert", "type": types[10], "subtype": "Enchanter Créature", "color": colors[4], "action": "Toutes les créatures qui peuvent bloquer la créature enchantée doivent le faire."},
+								{"name": "Enchainements", "CMC": "1 Vert", "type": types[4], "color": colors[4], "action": "Vous pouvez poser autant de terrains que vous voulez chaque tour. Toutefois, Enchainements vous inflige 1 point de dégâts pour chaque terrain posé en jeu durant le même tour, à part pour le premier posé."},
+								{"name": "Basilique des halliers", "CMC": "3 Général, 2 Vert", "type": types[3], "color": colors[4], "strength": "2", "durability": "4", "action": "Toute créature (murs exceptés) qui bloque le Basilic des Halliers est détruite, de même que toute créature bloquée par lui. Les créatures détruites de cette manière infligent leurs dégâts avant leur destruction", "misc": "Des statues couvertes de mousse jonchaient la région, telles autant de monuments macabres aux pouvoirs du basilic."},
+								{"name": "Sapience oubliée", "CMC": "1 Vert", "type": types[10], "color": colors[4], "action": "L'adversaire ciblé choisit une carte ciblée dans votre cimetière. Vous pouvez payer 1 mana Vert pour obliger cet adversaire à choisir une nouvelle cible qu'il n'a pas déjà choisie. Mettez la dernière carte ciblée dans votre main.", "misc": "Les gemmes de l'histoire repose dans ses cendres."},
+								{"name": "Mur de bois", "CMC": "1 Vert", "type": types[3], "subtype": "Mur", "color": colors[4], "strength": "0", "durability": "3", "misc": "Tout le monde sait que l'on touche du bois pour éviter le malheur. Mais mieux vaut s'en servir pour construire un lur qui vous protégera de l'ennemi."},
+								{"name": "Horde de Garruk", "CMC": "5 Général, 2 Vert", "type": types[3], "subtype": "bête", "color": colors[4], "strength": "7", "durability": "7", "action": "Piétinement. Jouez avec la carte du dessus de votre cimétière révélée. Vous pouvez lancer la carte du dessus de votre bibliothèque si c'est une carte de créature. (Vous payez quand même son coût de mana)"}
+
 			];
-			
+
 			var splittedURL = window.location.href.split("?");
 			if (splittedURL.length == 2)
 			{
@@ -51,14 +59,14 @@
 						displayInfo(Object.keys(card)[k], card[Object.keys(card)[k]]);
 				}
 			}
-			
+
 			function displayInfo(infoName, infoText)
 			{
 				var p = document.getElementById(infoName);
 				p.style.display = "block";
 				p.innerHTML += " : " + infoText;
 			}
-				
+
 			function getColors(colors){
 				var s = "";
 				for ( var i = 0; i < colors.length; i++ ){
