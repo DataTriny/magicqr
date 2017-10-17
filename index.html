@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<title>Magic cards</title>
 	</head>
-	<body>
+	<body onkeypress="swap()">
 		<h1 id="mainHeader">Carte introuvable !</h1>
 		<p id="name" style="display: none">Nom</p>
 		<p id="CMC" style="display: none">Cout Converti en Mana</p>
@@ -86,6 +86,15 @@
 					s += this.colors[colors[i]];
 				}
 				return s;
+			}
+			
+			function swap(){
+				if ( keyCode = 37 ){
+					document.location.href=document.location.href.split("?")[0] + document.location.href.split("?")[1] - 1;
+				}
+				if ( keyCode = 39 ){
+					document.location.href=document.location.href.split("?")[0] + document.location.href.split("?")[1] + 1;
+				}
 			}
 		</script>
 	</body>
